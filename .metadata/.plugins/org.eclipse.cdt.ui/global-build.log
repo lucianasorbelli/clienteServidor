@@ -1,0 +1,80 @@
+19:35:04 **** Build of configuration Debug for project Corrido ****
+make all 
+Building file: ../src/Corrido.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Corrido.d" -MT"src/Corrido.d" -o "src/Corrido.o" "../src/Corrido.c"
+../src/Corrido.c: In function ‘main’:
+../src/Corrido.c:61:70: error: lvalue required as unary ‘&’ operand
+   if ((cliente = accept(server, (struct sockaddr *)&conexionEntrante,&(sizeof(struct sockaddr_in)))) == -1) {
+                                                                      ^
+../src/Corrido.c: At top level:
+../src/Corrido.c:75:2: error: expected identifier or ‘(’ before ‘return’
+  return EXIT_SUCCESS;
+  ^
+../src/Corrido.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+src/subdir.mk:18: recipe for target 'src/Corrido.o' failed
+make: *** [src/Corrido.o] Error 1
+19:35:43 **** Incremental Build of configuration Debug for project Cliente ****
+make all 
+Building file: ../src/Cliente.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cliente.d" -MT"src/Cliente.d" -o "src/Cliente.o" "../src/Cliente.c"
+Finished building: ../src/Cliente.c
+ 
+Building target: Cliente
+Invoking: GCC C Linker
+gcc  -o "Cliente"  ./src/Cliente.o   
+Finished building target: Cliente
+ 
+19:35:44 **** Incremental Build of configuration Debug for project Corrido ****
+make all 
+Building file: ../src/Corrido.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Corrido.d" -MT"src/Corrido.d" -o "src/Corrido.o" "../src/Corrido.c"
+../src/Corrido.c: In function ‘main’:
+../src/Corrido.c:61:70: error: lvalue required as unary ‘&’ operand
+   if ((cliente = accept(server, (struct sockaddr *)&conexionEntrante,&(sizeof(struct sockaddr_in)))) == -1) {
+                                                                      ^
+../src/Corrido.c: At top level:
+../src/Corrido.c:75:2: error: expected identifier or ‘(’ before ‘return’
+  return EXIT_SUCCESS;
+  ^
+../src/Corrido.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+src/subdir.mk:18: recipe for target 'src/Corrido.o' failed
+make: *** [src/Corrido.o] Error 1
+19:36:04 **** Incremental Build of configuration Debug for project Cliente ****
+make all 
+make: Nothing to be done for 'all'.
+19:36:04 **** Incremental Build of configuration Debug for project Corrido ****
+make all 
+Building file: ../src/Corrido.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Corrido.d" -MT"src/Corrido.d" -o "src/Corrido.o" "../src/Corrido.c"
+../src/Corrido.c: In function ‘main’:
+../src/Corrido.c:62:70: warning: pointer targets in passing argument 3 of ‘accept’ differ in signedness [-Wpointer-sign]
+   if ((cliente = accept(server, (struct sockaddr *)&conexionEntrante,&(num))) == -1) {
+                                                                      ^
+In file included from ../src/Corrido.c:17:0:
+/usr/include/x86_64-linux-gnu/sys/socket.h:243:12: note: expected ‘socklen_t * restrict {aka unsigned int * restrict}’ but argument is of type ‘int *’
+ extern int accept (int __fd, __SOCKADDR_ARG __addr,
+            ^
+Finished building: ../src/Corrido.c
+ 
+Building target: Corrido
+Invoking: GCC C Linker
+gcc  -o "Corrido"  ./src/Corrido.o   
+Finished building target: Corrido
+ 
+19:36:14 **** Incremental Build of configuration Debug for project Cliente ****
+make all 
+make: Nothing to be done for 'all'.
+19:36:14 **** Incremental Build of configuration Debug for project Corrido ****
+make all 
+make: Nothing to be done for 'all'.
+19:36:43 **** Incremental Build of configuration Debug for project Corrido ****
+make all 
+make: Nothing to be done for 'all'.
